@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        span {
+            color:yellow;
+        }
+
+        .class1{
+            background-color: green;
+        }
+        #my-table {
+            font-size: 32px;
+        }
+    </style>
+    <script>
+        console.log("Het werkt"); 
+        
+        const a = 6; let b = 'Test';
+        var c = true; let d = 12
+
+        // var c = false
+        // let b = 'Test 2' 
+
+        console.log(a)
+        console.log("B heeft de waarde " + b)
+        console.log("C heeft de waarde " + c)
+
+        let addition = 2+5+4 
+        let subtract = 5 - 8
+        let multiply = a * 4
+        let divide = a / 5
+
+        d++ // d = d + 1
+        d-- // d = d - 1
+
+        //Verkorte notatie
+        d+=2 // d = d + 2
+        d-=4 // d = d - 4 (dit kan ook voor * en /)
+
+        //Vergelijking (comparator operators)
+        // Uitkomst -> boolean
+        console.log(d == 2) // gelijk aan elkaar
+        console.log(d != 2) // ongelijk aan elkaar
+        console.log(d > a) 
+
+        //Function declaration
+        function optellen(getal1, getal2) {
+            let optelWaarde = getal1 + getal2
+            console.log("optellen heeft waarde " + optelWaarde)
+        }
+
+        optellen(2, 5); //function call
+
+        function calculate() {
+            // document getElementById toegang tot het element krijgen
+            let getal1Element = document.getElementById('getal1-invoer')
+            // Element .value is dus de waarde die is ingevuld
+            console.log(getal1Element.value)
+            console.log(getal1Element.tagName)
+            console.log(getal1Element.type)
+
+            let getal1 = parseInt(getal1Element.value) // zet string om in getal
+            console.log(getal1 + getal1) 
+        }
+
+
+    </script>
+</head>
+<body>
+    <h1>Mijn pagina</h1>
+
+    <span style="color:rgb(224, 78, 78);">Tekst</span> <span> Tekst </span>
+
+    <p style="color: rgb(53, 201, 167); text-decoration: underline;">Dit is een paragraaf</p>
+
+    <table id="my-table">
+        <tr>
+            <td class="class1">Steven</td>
+        </tr>
+        <tr>
+            <td>Wientjes</td>
+            <td>Adriaan</td>
+        </tr>
+    </table>
+    <img src="https://imagesvc.meredithcorp.io/v3/jumpstartpure/image/?url=https%3A%2F%2Fcf-images.us-east-1.prod.boltdns.net%2Fv1%2Fstatic%2F3281700261001%2F6a204d6b-0fe4-45c8-a63e-b2e09c11de32%2Fa13648d5-c0b9-4ded-8ecd-89aad8634e6c%2F1280x720%2Fmatch%2Fimage.jpg&w=640&h=360&q=90&c=cc">
+    <input type="number" id="getal1-invoer">
+    <input type="text" id="getal2-invoer">
+    <button type="button" onclick="calculate()">Optellen</button>
+
+
+</body>
+</html>
