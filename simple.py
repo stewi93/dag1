@@ -11,4 +11,4 @@ def func2(tekst):
 
 func2("Steven")
 func1()
-
+print("Het is klaar!")
